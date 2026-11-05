@@ -1,0 +1,61 @@
+{
+  "name": "dsh-open-in-codebuddy",
+  "version": "1.0.0",
+  "description": "Adds a Session-header CodeBuddy button that opens the current workspace folder in CodeBuddy.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "codebuddy",
+    "open-in-app",
+    "workspace",
+    "ide"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gokucai/dsh-open-in-codebuddy"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./shared": "./shared.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "shared.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/*.png",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    },
+    "manifestVersion": 1
+  },
+  "homepage": "https://github.com/gokucai/dsh-open-in-codebuddy#readme",
+  "bugs": {
+    "url": "https://github.com/gokucai/dsh-open-in-codebuddy/issues"
+  }
+}

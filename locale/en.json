@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Open In...: CodeBuddy",
+    "description": "Adds CodeBuddy to the Session header's \"Open In...\" application menu, so the current workspace opens in CodeBuddy beside Finder, Cursor and your other installed apps."
+  }
+}
